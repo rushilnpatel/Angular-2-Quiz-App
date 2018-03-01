@@ -1,0 +1,27 @@
+<div class="container">
+	
+		<div class="row">
+			<div *ngIf="backBtn()" class="backnav col-md-1">
+              
+                <button class="glyphicon glyphicon-triangle-left btn btn-secondary btn-lg" (click)="backNav()"></button>
+			</div>
+			<div class="col-md-10">
+				Step {{point.index+1}} of {{total}}
+			</div>
+			<div *ngIf="forwardBtn()" class="forwardnav col-md-1">
+                
+                <button class="glyphicon glyphicon-triangle-right btn btn-secondary btn-lg" (click)="forwardNav()"></button>
+			</div>
+		</div>
+	
+		<div class="question" *ngFor="let que of questionofPage">
+			<p>{{que}}</p>
+		</div>
+		<div>
+			<button type="button" class="btn btn-secondary btn-lg ans" *ngFor="let answer of answers" (click)="onSelect(answer)">{{ answer }}</button>
+		</div>
+	
+	<div *ngIf="displayResult" class="result col-md-6 col-md-offset-4">
+		<p>Your final score is : {{result}}</p>
+	</div>
+</div>

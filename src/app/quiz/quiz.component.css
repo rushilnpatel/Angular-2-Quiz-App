@@ -1,0 +1,24 @@
+.container{
+    height: 70%;
+    width: 50%;
+    border: 2px solid gray;
+    text-align: center;
+    box-shadow: 5px 5px 15px;
+    padding: 40px;
+
+}
+
+.question{
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.result{
+    color: blue;
+        
+}
+.ans{
+    padding: 10px;
+    margin: 10px;
+}
